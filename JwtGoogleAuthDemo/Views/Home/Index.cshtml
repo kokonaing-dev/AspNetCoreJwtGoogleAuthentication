@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Hello This is Index Page</h1>
+
+<div class="form-group">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="Auth" asp-action="Logout" class="btn btn-danger">Logout</a>
+    }
+    else
+    {
+        <a asp-controller="Auth" asp-action="Login" class="btn btn-danger">Login</a>
+    }
+</div>
+<br /><br />
+<div class="form-group">
+    <a asp-action="Privacy" class="btn btn-danger">Privacy</a>
+</div>

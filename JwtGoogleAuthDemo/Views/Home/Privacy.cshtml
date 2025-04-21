@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Privacy";
+}
+<
+    
+h1>This is Privacy Page</h1>
+
+@if (ViewData["JwtToken"] != null)
+{
+    <div>
+        <strong>JWT Token:</strong> @ViewData["JwtToken"]
+    </div>
+}
+else
+{
+    <div>
+        <strong>No JWT token found in cookies.</strong>
+    </div>
+}
